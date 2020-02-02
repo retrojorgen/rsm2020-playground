@@ -31,7 +31,7 @@ function play(x, y, time, element) {
       element,
       time / 3,
       {
-        x: 0,
+        x: x,
         rotate: 0
       },
       "+=" + time / 3
