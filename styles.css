@@ -1,0 +1,50 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hero {
+  background-color: #050525;
+  width: 100vw;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.hero h1,
+.hero h2 {
+  color: white;
+}
+
+.animation-box {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.animation-box.blue {
+  background-color: blue;
+}
+
+.animation-box.green {
+  background-color: green;
+}
+
+.animation-box.orange {
+  background-color: orange;
+}
+
+.call-to-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
