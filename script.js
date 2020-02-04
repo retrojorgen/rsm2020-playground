@@ -62,29 +62,29 @@ function getRandomXPos () {
 Math.floor((Math.random() * 100) + 1);
 
 
-play(getRandomXPos(), getRandomHeight(), 3, box1, 0);
-play(getRandomXPos(), getRandomHeight(), 3, box2, 0.5);
-play(getRandomXPos(), getRandomHeight(), 3, box3, 0.75);
+play(getRandomXPos(), getRandomHeight(), 5, box1, 0);
+play(getRandomXPos(), getRandomHeight(), 5, box2, 0.5);
+play(getRandomXPos(), getRandomHeight(), 5, box3, 0.75);
 
-play(getRandomXPos(), getRandomHeight(), 3, box4, 1);
-play(getRandomXPos(), getRandomHeight(), 3, box5, 1.25);
+play(getRandomXPos(), getRandomHeight(), 5, box4, 1);
+play(getRandomXPos(), getRandomHeight(), 5, box5, 1.25);
 play(getRandomXPos(), getRandomHeight(), 4, box6, 1.4);
 
-play(getRandomXPos(), getRandomHeight(), 3, box7, 2.5);
-play(getRandomXPos(), getRandomHeight(), 3, box8, 2.7);
-play(getRandomXPos(), getRandomHeight(), 3, box9, 3);
+play(getRandomXPos(), getRandomHeight(), 5, box7, 2.5);
+play(getRandomXPos(), getRandomHeight(), 5, box8, 2.7);
+play(getRandomXPos(), getRandomHeight(), 5, box9, 5);
 
 
-play(getRandomXPos(), getRandomHeight(), 3, box10, 0);
-play(getRandomXPos(), getRandomHeight(), 3, box11, 0.5);
-play(getRandomXPos(), getRandomHeight(), 3, box12, 0.75);
+play(getRandomXPos(), getRandomHeight(), 5, box10, 0);
+play(getRandomXPos(), getRandomHeight(), 5, box11, 0.5);
+play(getRandomXPos(), getRandomHeight(), 5, box12, 0.75);
 
-play(getRandomXPos(), getRandomHeight(), 3, box13, 1);
-play(getRandomXPos(), getRandomHeight(), 3, box14, 1.25);
+play(getRandomXPos(), getRandomHeight(), 5, box13, 1);
+play(getRandomXPos(), getRandomHeight(), 5, box14, 1.25);
 play(getRandomXPos(), getRandomHeight(), 4, box15, 1.4);
 
-play(getRandomXPos(), getRandomHeight(), 3, box16, 2.5);
-play(getRandomXPos(), getRandomHeight(), 3, box17, 2.7);
-play(getRandomXPos(), getRandomHeight(), 3, box18, 3);
+play(getRandomXPos(), getRandomHeight(), 5, box16, 2.5);
+play(getRandomXPos(), getRandomHeight(), 5, box17, 2.7);
+play(getRandomXPos(), getRandomHeight(), 5, box18, 3);
 
 

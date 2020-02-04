@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Teko:400,700&display=swap');
 
+
+
+@keyframes background-move {
+  0%   { background-position-x: 0 }
+  100% { background-position-x: 4000px; }
+}
+
 html,
 body {
   margin: 0;
@@ -34,9 +41,58 @@ body {
 
 }
 
+.button-info-container {
+  background-color: #34136b;
+  border-radius: 40px;
+  margin-top: 40px;
+  width: 400px;
+  padding: 40px;
+  margin: 20px;
+  color: white;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.button-info-container button {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: Teko;
+  font-weight: regular;
+  border-radius: 10px;
+  border: 0;
+  color: #34136b;
+  background-color: #f6a127;
+  outline: none;
+}
+.button-info-container button:hover {
+  transform: scale(1.02);
+  transition: all 100ms ease-in-out;
+}
+
+.button-info-container button:active {
+  transform: scale(0.96);
+  transition: all 100ms ease-in-out;
+}
+
+.button-info-container h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.button-info-container p {
+  font-size: 1.2em;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
 #retromessa-logo-hero:hover {
-    transform: rotate(1deg);
-    transition: all 0.1s ease-in-out;
+    transform: rotate(-1deg);
+    transition: all 200ms ease-in-out;
 }
 
 .hero:before {
@@ -50,6 +106,7 @@ body {
     background-size: 5%;
     opacity: 0.1;
     background-blend-mode: multiply;
+    animation: background-move 600s linear;
 }
 
 .hero h1,
@@ -69,17 +126,19 @@ body {
 }
 
 .hero h2:hover {
-  transform: rotate(-1deg);
-  transition: all 0.1s ease-in-out;
+  transform: rotate(1deg);
+  transition: all 200ms ease-in-out;
 }
 
 .animation-box {
   position: absolute;
   top: calc(100% + 20px);
   left: 0;
-  width: 100px;
-  height: 100px;
   z-index: 0;
+}
+
+.animation-box.front {
+  z-index: 2;
 }
 
 .animation-box.blue {
@@ -96,7 +155,9 @@ body {
 
 .call-to-action {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 100px;
+  padding: 40px;
+  border-radius: 40px;
+  margin-top: 40px;
 }
