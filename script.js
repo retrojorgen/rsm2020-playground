@@ -21,10 +21,20 @@ var box7 = document.getElementById("box-7");
 var box8 = document.getElementById("box-8");
 var box9 = document.getElementById("box-9");
 
-function play(x, y, time, element) {
+var box10 = document.getElementById("box-10");
+var box11 = document.getElementById("box-11");
+var box12 = document.getElementById("box-12");
+var box13 = document.getElementById("box-13");
+var box14 = document.getElementById("box-14");
+var box15 = document.getElementById("box-15");
+var box16 = document.getElementById("box-16");
+var box17 = document.getElementById("box-17");
+var box18 = document.getElementById("box-18");
+
+function play(x, y, time, element, delay) {
   TweenLite.set(element, { y: 0, x: x });
-  var tl = new TimelineLite({ delay: 0 });
-  tl.to(element, time / 6, { y: -400 })
+  var tl = new TimelineLite({ delay: delay });
+  tl.to(element, time / 6, { y: y*-1 })
     .to(element, time / 2.4, { y: 0, ease: Bounce.easeOut })
     .to(element, time / 1.2, { x: "+=450", rotate: -80 }, "-=" + time / 1.75)
     .to(
@@ -38,6 +48,43 @@ function play(x, y, time, element) {
     )
     .call(play, [x, y, time, element]);
 }
-play(300, 400, 3, box1);
-play(600, 450, 4, box2);
-play(100, 500, 2, box3);
+
+function getRandomHeight () {
+  var maxHeight = window.innerHeight;
+  return Math.floor(Math.random() * maxHeight/2) + maxHeight/3;
+}
+
+function getRandomXPos () {
+  var maxWidth = window.innerWidth;
+  return Math.floor(Math.random() * maxWidth-maxWidth/2) + 1;
+}
+
+Math.floor((Math.random() * 100) + 1);
+
+
+play(getRandomXPos(), getRandomHeight(), 3, box1, 0);
+play(getRandomXPos(), getRandomHeight(), 3, box2, 0.5);
+play(getRandomXPos(), getRandomHeight(), 3, box3, 0.75);
+
+play(getRandomXPos(), getRandomHeight(), 3, box4, 1);
+play(getRandomXPos(), getRandomHeight(), 3, box5, 1.25);
+play(getRandomXPos(), getRandomHeight(), 4, box6, 1.4);
+
+play(getRandomXPos(), getRandomHeight(), 3, box7, 2.5);
+play(getRandomXPos(), getRandomHeight(), 3, box8, 2.7);
+play(getRandomXPos(), getRandomHeight(), 3, box9, 3);
+
+
+play(getRandomXPos(), getRandomHeight(), 3, box10, 0);
+play(getRandomXPos(), getRandomHeight(), 3, box11, 0.5);
+play(getRandomXPos(), getRandomHeight(), 3, box12, 0.75);
+
+play(getRandomXPos(), getRandomHeight(), 3, box13, 1);
+play(getRandomXPos(), getRandomHeight(), 3, box14, 1.25);
+play(getRandomXPos(), getRandomHeight(), 4, box15, 1.4);
+
+play(getRandomXPos(), getRandomHeight(), 3, box16, 2.5);
+play(getRandomXPos(), getRandomHeight(), 3, box17, 2.7);
+play(getRandomXPos(), getRandomHeight(), 3, box18, 3);
+
+
