@@ -34,7 +34,7 @@ var box18 = document.getElementById("box-18");
 function play(x, y, time, element, delay) {
   TweenLite.set(element, { y: 0, x: x });
   var tl = new TimelineLite({ delay: delay });
-  tl.to(element, time / 6, { y: y*-1 })
+  tl.to(element, time / 6, { y: y * -1 })
     .to(element, time / 2.4, { y: 0, ease: Bounce.easeOut })
     .to(element, time / 1.2, { x: "+=450", rotate: -80 }, "-=" + time / 1.75)
     .to(
@@ -49,18 +49,17 @@ function play(x, y, time, element, delay) {
     .call(play, [x, y, time, element]);
 }
 
-function getRandomHeight () {
+function getRandomHeight() {
   var maxHeight = window.innerHeight;
-  return Math.floor(Math.random() * maxHeight/2) + maxHeight/3;
+  return Math.floor((Math.random() * maxHeight) / 2) + maxHeight / 3;
 }
 
-function getRandomXPos () {
+function getRandomXPos() {
   var maxWidth = window.innerWidth;
-  return Math.floor(Math.random() * maxWidth-maxWidth/2) + 1;
+  return Math.floor(Math.random() * maxWidth - maxWidth / 2) + 1;
 }
 
-Math.floor((Math.random() * 100) + 1);
-
+Math.floor(Math.random() * 100 + 1);
 
 play(getRandomXPos(), getRandomHeight(), 5, box1, 0);
 play(getRandomXPos(), getRandomHeight(), 5, box2, 0.5);
@@ -74,7 +73,6 @@ play(getRandomXPos(), getRandomHeight(), 5, box7, 2.5);
 play(getRandomXPos(), getRandomHeight(), 5, box8, 2.7);
 play(getRandomXPos(), getRandomHeight(), 5, box9, 5);
 
-
 play(getRandomXPos(), getRandomHeight(), 5, box10, 0);
 play(getRandomXPos(), getRandomHeight(), 5, box11, 0.5);
 play(getRandomXPos(), getRandomHeight(), 5, box12, 0.75);
@@ -86,5 +84,3 @@ play(getRandomXPos(), getRandomHeight(), 4, box15, 1.4);
 play(getRandomXPos(), getRandomHeight(), 5, box16, 2.5);
 play(getRandomXPos(), getRandomHeight(), 5, box17, 2.7);
 play(getRandomXPos(), getRandomHeight(), 5, box18, 3);
-
-
