@@ -11,6 +11,9 @@ var resetElement = function(element) {
   element.style.transform3d = "";
 };
 
+var hero = document.getElementById("hero");
+var heroHeight = hero.offsetHeight;
+
 var box1 = document.getElementById("box-1");
 var box2 = document.getElementById("box-2");
 var box3 = document.getElementById("box-3");
@@ -50,7 +53,7 @@ function play(x, y, time, element, delay) {
 }
 
 function getRandomHeight() {
-  var maxHeight = window.innerHeight;
+  var maxHeight = heroHeight;
   return Math.floor((Math.random() * maxHeight) / 2) + maxHeight / 3;
 }
 

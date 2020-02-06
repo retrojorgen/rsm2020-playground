@@ -9,6 +9,10 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -24,13 +28,13 @@ body {
 .hero {
   background-color: #8445ca;
   width: 100vw;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  padding: 80px 10px;
 }
 #retromessa-logo-hero {
   max-width: 100%;
@@ -53,9 +57,9 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.button-info-container button {
+.button-info-container .action-button {
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   font-size: 1.6em;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -63,6 +67,10 @@ body {
   font-weight: regular;
   border-radius: 10px;
   border: 0;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
   color: #34136b;
   background-color: #f6a127;
   outline: none;
@@ -72,12 +80,12 @@ body {
   background-color: #03cbfb;
 }
 
-.button-info-container button:hover {
+.button-info-container .action-button:hover {
   transform: scale(1.02);
   transition: all 100ms ease-in-out;
 }
 
-.button-info-container button:active {
+.button-info-container .action-button:active {
   transform: scale(0.96);
   transition: all 100ms ease-in-out;
 }
@@ -142,7 +150,10 @@ body {
 }
 
 .hero h2 {
-  font-size: 3em;
+  font-size: 1.9em;
+  text-align: center;
+  padding: 11px;
+  max-width: 80%;
 }
 
 .hero h2:hover {
@@ -155,6 +166,7 @@ body {
   top: calc(100% + 20px);
   left: 0;
   z-index: 0;
+  max-width: 100px;
 }
 
 .animation-box.front {
@@ -175,12 +187,25 @@ body {
 
 .call-to-action {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
   padding: 20px;
-  border-radius: 40px;
-  margin-top: 40px;
   flex-direction: column;
+  width: 100%;
+  position: relative;
+  background-color: lightblue;
+}
+
+.call-to-action:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000%;
+  height: 100%;
+  background: url(images/back.gif);
+  background-size: 5%;
+  opacity: 0.2;
+  background-blend-mode: multiply;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -188,11 +213,20 @@ body {
     background-color: lightblue;
     flex-direction: row;
     padding: 40px;
+    align-items: flex-start;
+    justify-content: center;
   }
   .button-info-container {
     width: 400px;
     margin: 20px;
     padding: 40px;
     border-radius: 40px;
+  }
+  .hero h2 {
+    font-size: 3em;
+    padding: 10px 32px;
+  }
+  .animation-box {
+    max-width: auto;
   }
 }
