@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Roboto:400,400i,700,700i&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Roboto:400,400i,700,700i&display=swap");
 
 body,
 html {
-  margin:0;
+  margin: 0;
   padding: 0;
   background-color: #080c27;
   font-family: roboto;
 }
 
 body {
-  padding-bottom: 70px;
+  padding-bottom: 100px;
+  color: var(--color-text-light);
 }
 
 * {
@@ -21,4 +22,21 @@ body {
     padding-top: 70px;
     padding-bottom: 0;
   }
+}
+
+body {
+  --color-purple: #8445ca;
+  --color-darker-purple: #34136b;
+  --color-orange: #ff7322;
+  --color-blue: #03cbfb;
+  --color-light-blue: #90c4da;
+  --color-shade-white: #90c4da;
+
+  --color-hero-one: var(--color-purple);
+  --color-hero-one-dark: var(--color-darker-purple);
+  --color-hero-two: var(--color-light-blue);
+  --color-text-light: var(--color-light-blue);
+  --color-text-light-accent: var(--color-blue);
+  --color-menu-background: var(--color-darker-purple);
+  --color-accented-hero-background: var(--color-orange);
 }
